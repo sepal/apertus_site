@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+    - "80:80"
+    links:
+    - database:database
+    volumes:
+    - ./web/modules:/var/www/web/modules
+    - ./web/themes:/var/www/web/themes
+    - ./web/profiles:/var/www/web/profiles
+    environment:
+      DB_USER: drupal
+      DB_PASSWORD: drupal
+      DB_DATABASE: drupal
+      DB_ROOT_PASSWORD: root
+
+  database:
+    image: mysql:5.7
+    volumes:
+    - database:/var/lib/mysql
+    environment:
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_DATABASE: drupal
+      MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  database:

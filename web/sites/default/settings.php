@@ -86,7 +86,17 @@
  * );
  * @endcode
  */
- $databases = array();
+$databases = array();
+$databases['default']['default'] = array (
+ 'database' => getenv('DB_DATABASE'),
+ 'username' => getenv('DB_USER'),
+ 'password' => getenv('DB_PASSWORD'),
+ 'host' => 'database',
+ 'port' => '3306',
+ 'driver' => 'mysql',
+ 'prefix' => '',
+ 'collation' => 'utf8mb4_general_ci',
+);
 
 /**
  * Customizing database settings.
@@ -530,7 +540,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = '../private';
 
 /**
  * Session write interval:
@@ -633,7 +643,7 @@ if ($settings['hash_salt']) {
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-# $config['system.site']['name'] = 'My Drupal site';
+$config['system.site']['name'] = 'apertus° - open source cinema';
 # $config['system.theme']['default'] = 'stark';
 # $config['user.settings']['anonymous'] = 'Visitor';
 
@@ -737,6 +747,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
+  'src'
 ];
 
 /**
