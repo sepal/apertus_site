@@ -1,0 +1,11 @@
+name: Apertus
+type: theme
+description: Apertus theme.
+core: 8.x
+regions:
+  header: Header
+  navigation_primary: 'Primary navigation'
+  navigation_secondary: 'Secondary navigation'
+  content: Content  # the content region is required
+  sidebar_right: 'Sidebar right'
+  footer: Footer
