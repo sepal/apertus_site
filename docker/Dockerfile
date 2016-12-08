@@ -9,7 +9,8 @@ ENV VIRTUAL_HOST="localhost" \
     DB_PORT="3306" \
     DB_USER="" \
     DB_PASSWORD="" \
-    DB_DATABASE="database"
+    DB_DATABASE="database" \
+    COMPOSER_ALLOW_SUPERUSER=1
 
 # Install basic cli tools and required packages.
 RUN apt-get update \
@@ -20,6 +21,14 @@ RUN apt-get update \
   && pecl install xdebug \
   && a2enmod rewrite
 
+# Install composer.
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
+# Install drush.
+RUN composer global require drush/drush \
+  && ln -s /root/.composer/vendor/bin/drush /usr/bin/drush
+
+# Place custom apache config.
 COPY ./docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN mkdir -p /var/www/private && mkdir -p /var/www/web/sites/default/files
