@@ -13,6 +13,7 @@ services:
     - ./web/modules:/var/www/web/modules
     - ./web/themes:/var/www/web/themes
     - ./web/profiles:/var/www/web/profiles
+    - ./sync:/var/www/sync
     environment:
       DB_USER: drupal
       DB_PASSWORD: drupal
