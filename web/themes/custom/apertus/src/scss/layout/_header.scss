@@ -1,0 +1,5 @@
+@import "../abstract/layout";
+
+header {
+  @extend %region;
+}
