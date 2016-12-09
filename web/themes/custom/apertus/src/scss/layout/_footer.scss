@@ -1,0 +1,8 @@
+.region-footer {
+  @extend %region;
+  padding: 10px;
+
+  .block {
+    @include span-columns(4);
+  }
+}
