@@ -1,12 +1,14 @@
 @import "../abstract/layout";
 
-header {
+.region-header {
   @extend %region;
+  padding: 10px;
 }
+
 .block-system-branding-block {
-  @include span-columns(4 of 12);
+  @include span-columns(4);
 }
 
 .menu--navigation-primary {
-  @include span-columns(6 of 12);
+  @include span-columns(6);
 }

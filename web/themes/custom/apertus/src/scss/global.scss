@@ -1,4 +1,10 @@
 @import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
 @import "base/base";
+
 @import "layout/header";
 @import "layout/navigation";
+
+@import "components/branding";
+@import "components/navigation";
+
+@import "styling/page";

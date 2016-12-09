@@ -1,0 +1,14 @@
+.menu--navigation-primary {
+  .menu-item {
+    line-height: 50px;
+    margin-right: 1em;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover, &:link, &:active {
+      text-decoration: none;
+    }
+  }
+}

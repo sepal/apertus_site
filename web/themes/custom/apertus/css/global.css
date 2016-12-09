@@ -4,11 +4,11 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-header {
+.region-header {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
-  header::after {
+  .region-header::after {
     clear: both;
     content: "";
     display: block; }
@@ -16,14 +16,17 @@ header {
 body, html {
   width: 100%; }
 
-header {
+.region-header {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
-  header::after {
+  .region-header::after {
     clear: both;
     content: "";
     display: block; }
+
+.region-header {
+  padding: 10px; }
 
 .block-system-branding-block {
   float: left;
@@ -45,5 +48,25 @@ header {
   margin: 0; }
   .menu--navigation-primary .menu li {
     padding: 0;
-    margin: 0;
     display: inline-block; }
+
+.block-system-branding-block {
+  height: 50px; }
+  .block-system-branding-block img {
+    width: auto;
+    height: 100%; }
+
+.menu--navigation-primary .menu-item {
+  line-height: 50px;
+  margin-right: 1em; }
+
+.menu--navigation-primary a {
+  text-decoration: none; }
+  .menu--navigation-primary a:hover, .menu--navigation-primary a:link, .menu--navigation-primary a:active {
+    text-decoration: none; }
+
+body {
+  background: #F2F5F2; }
+
+header {
+  background: white; }
