@@ -7,8 +7,6 @@ libraries:
   - apertus/global-styling
 regions:
   header: Header
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   featured_top: 'Featured top'
