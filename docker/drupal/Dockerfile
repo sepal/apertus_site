@@ -29,7 +29,7 @@ RUN composer global require drush/drush \
   && ln -s /root/.composer/vendor/bin/drush /usr/bin/drush
 
 # Place custom apache config.
-COPY ./docker/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./docker/drupal/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN mkdir -p /var/www/private && mkdir -p /var/www/web/sites/default/files
 
