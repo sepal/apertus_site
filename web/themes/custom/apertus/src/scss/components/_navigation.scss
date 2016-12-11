@@ -5,10 +5,6 @@
   }
 
   a {
-    text-decoration: none;
-
-    &:hover, &:link, &:active {
-      text-decoration: none;
-    }
+    @extend %menu--link;
   }
 }

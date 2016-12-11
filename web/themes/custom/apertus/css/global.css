@@ -7,7 +7,8 @@ html {
 .region-header, .region-footer {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 10px; }
   .region-header::after, .region-footer::after {
     clear: both;
     content: "";
@@ -16,17 +17,19 @@ html {
 body, html {
   width: 100%; }
 
+img {
+  width: 100%;
+  height: auto; }
+
 .region-header, .region-footer {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 10px; }
   .region-header::after, .region-footer::after {
     clear: both;
     content: "";
     display: block; }
-
-.region-header {
-  padding: 10px; }
 
 .block-system-branding-block {
   float: left;
@@ -50,6 +53,30 @@ body, html {
     padding: 0;
     display: inline-block; }
 
+.menu--navigation-primary a, .region-footer .menu-item a {
+  color: #2D2D2D;
+  text-decoration: none; }
+  .menu--navigation-primary a:hover, .region-footer .menu-item a:hover, .menu--navigation-primary a:link, .region-footer .menu-item a:link, .menu--navigation-primary a:active, .region-footer .menu-item a:active {
+    color: #F68425;
+    text-decoration: none; }
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  main::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.layout-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .layout-content:last-child {
+    margin-right: 0; }
+
 .region-footer {
   padding: 10px; }
   .region-footer .block {
@@ -70,11 +97,6 @@ body, html {
   line-height: 50px;
   margin-right: 1em; }
 
-.menu--navigation-primary a {
-  text-decoration: none; }
-  .menu--navigation-primary a:hover, .menu--navigation-primary a:link, .menu--navigation-primary a:active {
-    text-decoration: none; }
-
 .region-footer .block-menu h2 {
   font-size: 1rem; }
 
@@ -85,13 +107,9 @@ body, html {
 .region-footer .menu-item {
   margin-top: 0.5rem;
   padding: 0; }
-  .region-footer .menu-item a {
-    text-decoration: none; }
-    .region-footer .menu-item a:hover, .region-footer .menu-item a:link, .region-footer .menu-item a:active {
-      text-decoration: none; }
 
 body {
   background: #F2F5F2; }
 
-header {
+header, footer[role=contentinfo] {
   background: white; }
