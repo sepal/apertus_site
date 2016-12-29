@@ -22,7 +22,8 @@
         "drupal/core": "~8.0",
         "drush/drush": "~8.0",
         "drupal/console": "~1.0",
-        "drupal/paragraphs": "^1.0"
+        "drupal/paragraphs": "^1.0",
+        "drupal/social_media_links": "^2.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -63,7 +63,8 @@ img {
 main {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 10px; }
   main::after {
     clear: both;
     content: "";
@@ -75,6 +76,38 @@ main {
   margin-right: 2.35765%;
   width: 100%; }
   .layout-content:last-child {
+    margin-right: 0; }
+
+.has-sidebar-first .layout-content, .has-sidebar-second .layout-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .has-sidebar-first .layout-content:last-child, .has-sidebar-second .layout-content:last-child {
+    margin-right: 0; }
+
+.has-sidebar-first.has-sidebar-second .layout-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .has-sidebar-first.has-sidebar-second .layout-content:last-child {
+    margin-right: 0; }
+
+.layout-sidebar-first {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .layout-sidebar-first:last-child {
+    margin-right: 0; }
+
+.layout-sidebar-second {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .layout-sidebar-second:last-child {
     margin-right: 0; }
 
 .region-footer {

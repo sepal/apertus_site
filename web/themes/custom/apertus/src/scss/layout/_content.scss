@@ -1,7 +1,0 @@
-main {
-  @include outer-container;
-}
-
-.layout-content {
-  @include span-columns(12 of 12)
-}

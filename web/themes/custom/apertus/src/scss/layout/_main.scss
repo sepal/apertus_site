@@ -1,0 +1,27 @@
+main {
+  @include outer-container;
+  padding: 10px;
+}
+.layout-content {
+  @include span-columns(12)
+}
+
+.has-sidebar-first, .has-sidebar-second {
+  .layout-content {
+    @include span-columns(9)
+  }
+}
+
+.has-sidebar-first.has-sidebar-second {
+  .layout-content {
+    @include span-columns(6)
+  }
+}
+
+.layout-sidebar-first {
+  @include span-columns(3)
+}
+
+.layout-sidebar-second {
+  @include span-columns(3)
+}
